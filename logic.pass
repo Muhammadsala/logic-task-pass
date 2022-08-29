@@ -1,0 +1,63 @@
+#Q1/ remove any given character from a string?
+
+hama="hello i'm muhammad from erbil"
+p=hama.replace("m"," ")
+print (p)
+
+
+#result:- 
+
+hello i'   uha  ad fro  erbil
+
+
+
+#Q2/ Program to find all primE numbers up to given range of numbers?
+
+lower = int(input("Enter lower value:"))
+upper = int(input("EnteR upper value:"))
+for number in range(lower,upper+1):
+    if number>1:
+        for i in range(2,number):
+            if (number%i)==0:
+                break
+        else:
+            print(number)
+            
+#result:-
+
+
+Enter lower value:1
+Enter upper value:20
+2
+3
+5
+7
+11
+13
+17
+19
+
+
+
+#Q3/ write a function count how many the given character repeated in a  given string ?
+
+
+string = "my name is mohammed im from iraq";
+for i in range(0, len(string)):  
+    count = 1;  
+    for j in range(i+1, len(string)):  
+        if(string[i] == string[j] and string[i] != ' '):  
+            count = count + 1;  
+            string = string[:j] + '0' + string[j+1:];  
+    if(count > 1 and string[i] != '0'):  
+        print(string[i],"---> ",count);
+        
+        
+#result : 
+        
+m --->  7
+a --->  3
+e --->  2
+i --->  3
+o --->  2
+r --->  2
